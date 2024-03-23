@@ -4,7 +4,7 @@ import { Image, Text, View } from 'react-native';
 import { styles } from './style';
 import { useAuth } from '../../context/UserAuthContext';
 
-import Logo from "../../../assets/images/logo2.png"
+import Logo from "../../../assets/images/Logo.png"
 import { TouchableButton } from '../../components/Button';
 import { firestore } from '../../services/firebaseConfig';
 import { collection, getDocs, query, where } from 'firebase/firestore';

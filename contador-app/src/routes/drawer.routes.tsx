@@ -15,6 +15,7 @@ import { Sobre } from "../screens/SideBar/Sobre";
 import { HomeScreen } from "../screens/Home/HomeMainScreen";
 import { useEffect } from "react";
 import { Profile } from "../screens/Home/Profile";
+import { COLORS } from "../constants/styles";
 
 const { Navigator, Screen } = createDrawerNavigator()
 
@@ -39,7 +40,7 @@ export function DrawerRoutes({ route, navigation }: any) {
       initialRouteName={desafioId}
       drawerContent={(props: any) => <CustomDrawerContent  {...props} />}
       screenOptions={{
-        drawerActiveBackgroundColor: "brown",
+        drawerActiveBackgroundColor: COLORS.mustard,
         drawerActiveTintColor: "#fff",
         drawerLabelStyle: {
           fontSize: 20,

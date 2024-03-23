@@ -6,7 +6,7 @@ import { COLORS, WINDOW_HEIGHT, WINDOW_WIDTH } from '../../../../../constants/st
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.primary
+    backgroundColor: COLORS.dark
   },
   count: {
     alignItems: "center",
@@ -18,15 +18,5 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     height: WINDOW_HEIGHT/1.5,
-  },
-  sum: {
-    backgroundColor: "brown",
-    width: WINDOW_WIDTH - 50,
-    borderRadius: 50
-  },
-  minus: {
-    backgroundColor: "brown",
-    width: WINDOW_WIDTH - 50,
-    borderRadius: 50
   }
 });

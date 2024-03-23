@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
-import { Modal, Text, TouchableOpacity, View,  } from 'react-native';
+import { Alert, Modal, Text, TouchableOpacity, View,  } from 'react-native';
 
 import { styles } from './style';
 import { AsyncImage } from '../../../components/AsyncImage';
 import { useAuth } from '../../../context/UserAuthContext';
 import { AntDesign, MaterialCommunityIcons, FontAwesome5, Feather, MaterialIcons } from '@expo/vector-icons';
 import { Itens } from '../../../components/Itens';
-import { signOut } from 'firebase/auth';
+import { deleteUser, EmailAuthProvider, signOut } from 'firebase/auth';
 import { auth } from '../../../services/firebaseConfig';
+import DeleteAccountModal from '../../../components/DeleteAccount';
 
 
 export function Settings({navigation}: any) {
   const { currentUser } = useAuth()
   const displayName = currentUser?.displayName ? currentUser.displayName : ""
   const email = currentUser?.email ? currentUser.email : ""
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false)
+  const [showModalDeleteAccount, setShowModalDeleteAccount] = useState(false)
 
   const signOutUser = async() => {
     await signOut(auth).then(() => {
       navigation.navigate("Login")
     })
+  }
+
+  const toggleDeleteAccountModal = () => {
+    setShowModalDeleteAccount(!showModalDeleteAccount)
   }
 
   const subOptions = () => (
@@ -75,7 +81,10 @@ export function Settings({navigation}: any) {
           <View>
             <Text style={styles.textOption}>Conta</Text>
             <Itens icon={<MaterialIcons name="logout" size={30} color="#fff" />} onPress={signOutUser} labelName='Sair'/>
-            <Itens icon={<AntDesign name="deleteuser" size={30} color="red"/>} labelName='Deletar conta' colorStyle='red'/>
+            <Itens icon={<AntDesign name="deleteuser" size={30} color="red"/>} onPress={toggleDeleteAccountModal} labelName='Deletar conta' colorStyle='red'/>
+            {showModalDeleteAccount && (
+              <DeleteAccountModal isVisible={showModalDeleteAccount} onClose={toggleDeleteAccountModal}/>
+            )}
           </View>
         </View>
       </View>

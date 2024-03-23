@@ -15,7 +15,7 @@ export function CustomDrawerContent(props: any) {
     itemStyle: { marginVertical: 5 }, // Estilo aplicado a cada item
   }
   return (
-    <DrawerContentScrollView {...props} style={{ backgroundColor: COLORS.primary }}>
+    <DrawerContentScrollView {...props} style={{ backgroundColor: COLORS.dark }}>
       <DrawerItemList
         {...customDrawerItemProps}
         

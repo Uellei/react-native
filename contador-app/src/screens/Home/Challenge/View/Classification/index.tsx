@@ -9,6 +9,7 @@ import { ChallengeData, Participante } from '../../../../../context/ChallengeCon
 import { useAuth } from '../../../../../context/UserAuthContext';
 import { AsyncImage } from '../../../../../components/AsyncImage';
 import { TouchableButton } from '../../../../../components/Button';
+import { COLORS } from '../../../../../constants/styles';
 
 export function Classification({ route, navigation }: any) {
   const { currentUser } = useAuth()
@@ -123,7 +124,7 @@ export function Classification({ route, navigation }: any) {
       <TouchableButton
         title='+'
         onPress={() => { navigation.navigate("CountScreen", { desafioId: desafioId }) }}
-        backgroundColor='brown'
+        backgroundColor={COLORS.mustard}
         borderRadius={50}
         style={{
           position: "absolute",

@@ -4,14 +4,14 @@ import { COLORS, WINDOW_HEIGHT } from '../../../constants/styles';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.dark,
     flex: 1,
     alignItems: "center",
   },
   loginLogo: {
-    marginTop: WINDOW_HEIGHT/4,
+    marginTop: WINDOW_HEIGHT/4.5,
     height: WINDOW_HEIGHT/2.1,
-    width: "100%",
+    width: "95%",
     justifyContent: "center",
     alignItems: "center"
   },
@@ -21,7 +21,8 @@ export const styles = StyleSheet.create({
     resizeMode: "contain"
   },
   welcome: {
-    height: WINDOW_HEIGHT/9,
+    height: WINDOW_HEIGHT/10,
+    marginTop: 20
   },
   welcomeText: {
     color: "#fff",
@@ -38,14 +39,6 @@ export const styles = StyleSheet.create({
   },
   createAccountContainer: {
     width: "90%",
-  },
-  createAccount: {
-    borderColor: "#fff",
-    backgroundColor: "#fff",
-    borderWidth: 2,
-    justifyContent: "center",
-    borderRadius: 10,
-    padding: 10
   },
   alreadyAccountContainer: {
     flexDirection: 'row',

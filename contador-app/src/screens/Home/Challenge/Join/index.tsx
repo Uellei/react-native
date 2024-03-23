@@ -7,6 +7,7 @@ import { arrayUnion, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useAuth } from '../../../../context/UserAuthContext';
 import { TouchableButton } from '../../../../components/Button';
 import { useChallenge } from '../../../../context/ChallengeContext';
+import { COLORS } from '../../../../constants/styles';
 
 export function Join({navigation}: any) {
   const { currentUser } = useAuth()
@@ -57,12 +58,12 @@ export function Join({navigation}: any) {
         <TouchableButton
           onPress={handleJoinChallenge}
           title='Juntar'
-          backgroundColor='brown'
-          borderColor='brown'
+          backgroundColor={COLORS.mustard}
+          borderColor={COLORS.mustard}
           borderWidth={2}
           padding={10}
           fontSize={18}
-          fontFamily='Montserrat-Regular'
+          fontFamily='Montserrat-SemiBold'
           style={{ marginTop: 30 }}
           textStyle={{ color: "#fff" }}
         />

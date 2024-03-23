@@ -7,7 +7,7 @@ import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { useAuth } from '../../../../../context/UserAuthContext';
 import { useFocusEffect } from '@react-navigation/native';
 import { TouchableButton } from '../../../../../components/Button';
-import { WINDOW_WIDTH } from '../../../../../constants/styles';
+import { COLORS, WINDOW_WIDTH } from '../../../../../constants/styles';
 
 const updateParticipantCount = async (desafioId: any, userId: any, newCount: number) => {
   const desafioRef = doc(firestore, "desafios", desafioId)
@@ -100,7 +100,7 @@ export function CountScreen({ route, navigation }: any) {
           <TouchableButton
             title='+'
             onPress={handleIncrement}
-            backgroundColor='brown'
+            backgroundColor={COLORS.mustard}
             borderRadius={50}
             style={{ width: WINDOW_WIDTH - 50 }}
             fontSize={80}
@@ -108,7 +108,7 @@ export function CountScreen({ route, navigation }: any) {
           <TouchableButton
             title='-'
             onPress={handleDecrement}
-            backgroundColor='brown'
+            backgroundColor={COLORS.mustard}
             borderRadius={50}
             style={{ width: WINDOW_WIDTH - 50 }}
             fontSize={60}

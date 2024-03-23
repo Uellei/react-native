@@ -1,7 +1,13 @@
 import { Dimensions } from "react-native";
 
 export const COLORS = {
-  primary: "#021318"
+  dark: "#020b0a",
+  red: "#ec1b1a",
+  mustard: "#fba930",
+  fifth: "#f78d2c",
+  darkGreen: "#f78d2c",
+  lightGreen: "#f78d2c"
+
 }
 
 export const WINDOW_HEIGHT = Dimensions.get('window').height

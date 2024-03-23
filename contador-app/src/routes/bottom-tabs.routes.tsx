@@ -17,12 +17,13 @@ export function BottomTabsRoutes({route}: any) {
     <Navigator
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: COLORS.primary,
+          backgroundColor: COLORS.dark,
           borderTopWidth: 0,
           paddingBottom: 15,
           height: tabBarHeight,
         },
         tabBarInactiveTintColor: 'white',
+        tabBarActiveTintColor: COLORS.red,
         tabBarLabelStyle: {
           fontSize: 13,
         }

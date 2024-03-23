@@ -4,7 +4,7 @@ import { COLORS } from '../../../../constants/styles';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.dark,
     alignItems: "center",
     paddingTop: 40
   },
@@ -16,15 +16,7 @@ export const styles = StyleSheet.create({
   text: {
     color: "#fff",
     fontSize: 26,
-    // fontWeight: "bold"
     fontFamily: "Montserrat-Bold"
-  },
-  infoChallengeContainer: {
-    marginTop: 20,
-    backgroundColor: "brown",
-    borderRadius: 10,
-    flexDirection: "row",
-    padding: 20
   },
   info: {
     flex: 1,

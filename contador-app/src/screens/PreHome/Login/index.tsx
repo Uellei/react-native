@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Image, Text, View } from 'react-native';
 
 import { styles } from './style';
-import Logo from '../../../../assets/images/logo2.png'
+import Logo from '../../../../assets/images/Logo.png'
 import { TouchableButton } from '../../../components/Button';
+import { COLORS } from '../../../constants/styles';
 
 // SUB COMPONENT - ICONE LOGIN INICIAL
 const iconLogin = () => (
@@ -15,7 +16,7 @@ const iconLogin = () => (
 // SUB COMPONENT - BOAS VINDAS
 const welcomeMessage = () => (
   <View style={styles.welcome}>
-    <Text style={styles.welcomeText}>Bem Vindo ao Bite Battle</Text>
+    <Text style={styles.welcomeText}>Bem Vindo ao Bite Challenge</Text>
   </View>
 )
 
@@ -30,6 +31,7 @@ export function Login({ navigation }: any) {
           onPress={() => {navigation.navigate("SignUp")}}
           padding={10}
           borderWidth={2}
+          backgroundColor={COLORS.mustard}
         />
       </View>
       <View style={styles.alreadyAccountContainer}>

@@ -3,7 +3,7 @@ import { COLORS, WINDOW_HEIGHT } from '../../constants/styles';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.dark,
     flex: 1,
     alignItems: "center"
   },

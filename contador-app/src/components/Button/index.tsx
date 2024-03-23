@@ -41,7 +41,7 @@ export const TouchableButton = ({
         borderRadius: borderRadius,
         borderColor: borderColor,
         borderWidth: borderWidth,
-        padding: padding
+        padding: padding,
       }
     ]}
   >
@@ -50,7 +50,7 @@ export const TouchableButton = ({
       {
         textAlign: textAlign,
         fontSize: fontSize,
-        fontFamily: fontFamily
+        fontFamily: fontFamily,
       },
     ]}
     >{title}</Text>
